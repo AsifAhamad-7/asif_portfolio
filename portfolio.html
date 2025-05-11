@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ASIF AHAMAD - Portfolio</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to bottom, white, skyblue);
+      color: #333;
+      line-height: 1.6;
+      position: relative;
+      overflow-x: hidden;
+    }
+
+    /* === CLOUD ANIMATION BACKGROUND === */
+    .clouds {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 200%;
+      height: 100%;
+      background: url('https://i.imgur.com/ax2j43E.png') repeat-x;
+      animation: moveClouds 60s linear infinite;
+      z-index: -1;
+      opacity: 0.4;
+    }
+
+    @keyframes moveClouds {
+      0% { background-position: 0 0; }
+      100% { background-position: -1000px 0; }
+    }
+
+    /* === CURSOR TRAIL DOT === */
+    .cursor-dot {
+      width: 8px;
+      height: 8px;
+      background-color: #005b99;
+      border-radius: 50%;
+      position: absolute;
+      pointer-events: none;
+      z-index: 9999;
+      animation: fadeOut 0.5s forwards;
+    }
+
+    @keyframes fadeOut {
+      to {
+        opacity: 0;
+        transform: scale(2);
+      }
+    }
+
+    /* === CLICK RIPPLE EFFECT === */
+    .click-effect {
+      width: 20px;
+      height: 20px;
+      border: 2px solid #005b99;
+      border-radius: 50%;
+      position: absolute;
+      animation: pop 0.6s ease-out forwards;
+      pointer-events: none;
+      z-index: 1000;
+    }
+
+    @keyframes pop {
+      0% {
+        transform: scale(1);
+        opacity: 1;
+      }
+      100% {
+        transform: scale(4);
+        opacity: 0;
+      }
+    }
+
+    .container {
+      width: 85%;
+      margin: auto;
+      padding: 2rem 0;
+    }
+
+    header {
+      background-color: skyblue;
+      padding: 2rem 0;
+      text-align: center;
+      color: white;
+    }
+
+    nav {
+      background-color: #f0f0f0;
+      padding: 1rem;
+      text-align: center;
+    }
+
+    nav a {
+      margin: 0 1rem;
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      color: #005b99;
+    }
+
+    .profile-img {
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin-bottom: 1rem;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    p {
+      font-size: 1.1rem;
+    }
+
+    section {
+      margin-top: 2rem;
+    }
+
+    h2 {
+      margin-bottom: 1rem;
+      color: #005b99;
+    }
+
+    .project-row {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      margin-bottom: 1rem;
+    }
+
+    .project {
+      background-color: white;
+      padding: 1rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      flex: 1 1 45%;
+    }
+
+    .project img {
+      width: 50%;
+      max-width: 50%;
+      border-radius: 4px;
+      margin-bottom: 0.1rem;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 0.7rem 1.5rem;
+      background-color: lightgreen;
+      color: #333;
+      text-decoration: green wavy underline;
+      border-radius: 5px;
+      font-weight: bold;
+      margin-top: 1rem;
+      transition: all 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: #66cc66;
+      color: white;
+      transform: scale(1.05);
+    }
+
+    .btn:active {
+      transform: scale(0.95);
+      box-shadow: 0 0 10px #66cc66;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background-color: #f0f0f0;
+      margin-top: 2rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- CLOUDS BACKGROUND -->
+  <div class="clouds"></div>
+
+  <header>
+    <div class="container header-container">
+      <img src="WhatsApp Image 2025-05-07 at 22.08.43_b4cd394a.jpg" alt="ASIF AHAMAD" class="profile-img" />
+      <h1>Asif Ahamad</h1>
+      <p>Web Developer | UI/UX Enthusiast | Lifelong Learner</p>
+    </div>
+  </header>
+
+  <nav>
+    <a href="#">Home</a>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="mailto:asif7ahamad1@gmail.com">Contact</a>
+  </nav>
+
+  <section id="about" class="about container">
+    <h2>About Me</h2>
+    <p>Hello visitor, this is Asif Ahamad. I am here to give your website a new way of customization. I have done HTML, CSS, and JavaScript.</p>
+  </section>
+
+  <section id="projects" class="projects container">
+    <h2>Projects</h2>
+
+    <div class="project-row">
+      <div class="project">
+        <img src="https://1000logos.net/wp-content/uploads/2021/06/Zomato-logo.jpg" alt="Zomato Clone">
+        <h3>Zomato Clone</h3>
+        <p>I have made a Zomato clone—a website that helps users to buy food online.</p>
+      </div>
+      <div class="project">
+        <img src="https://static.vecteezy.com/system/resources/previews/051/336/398/non_2x/w3schools-transparent-logo-free-png.png" alt="W3Schools Clone">
+        <h3>W3Schools Clone</h3>
+        <p>Cloning W3Schools provided me deep insights into layout and content structure techniques.</p>
+      </div>
+    </div>
+
+    <div class="project-row">
+      <div class="project">
+        <img src="https://static.vecteezy.com/system/resources/previews/001/416/705/original/html5-emblem-orange-shield-and-white-text-vector.jpg" alt="HTML Project">
+        <h3>HTML Practice</h3>
+        <p>Created structured layouts using HTML elements as a foundation for web pages.</p>
+      </div>
+      <div class="project">
+        <img src="https://static.vecteezy.com/system/resources/previews/001/416/705/original/html5-emblem-orange-shield-and-white-text-vector.jpg" alt="CSS Styling">
+        <h3>CSS Styling</h3>
+        <p>Enhanced the look and feel of web content using advanced CSS techniques.</p>
+      </div>
+    </div>
+
+    <div class="project-row">
+      <div class="project" style="flex: 1 1 50%;">
+        <img src="https://logos-world.net/wp-content/uploads/2023/02/JavaScript-Emblem.png" alt="JavaScript">
+        <h3>JavaScript</h3>
+        <p>Implemented interactivity and functionality using core JavaScript methods.</p>
+      </div>
+      <div class="project">
+        <img src="https://files.realpython.com/media/python-logo.8eb72ea6927b.png" alt="CSS Styling">
+        <h3>Python</h3>
+        <p>I have also done Python, so don't hesitate to ask for extras.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact container">
+    <h2>Contact Me</h2>
+    <p>Have a project or want to collaborate? Let's get in touch.</p>
+    <a href="mailto:asif7ahamad1@gmail.com" class="btn">Email Me</a>
+  </section>
+
+  <section class="socials container">
+    <h2>Connect with Me</h2>
+    <div style="display: flex; gap: 2rem; flex-wrap: wrap;">
+      <a href="https://github.com/AsifAhamad-7/webdevportfolio" target="_blank" class="btn">My GitHub</a>
+      <a href="https://www.linkedin.com/in/asif-ahamad-38b845340" target="_blank" class="btn">My LinkedIn</a>
+      <a href="resume2ndsem.pdf" download="">DOWNLOAD CV</a>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 ASIF AHAMAD</p>
+  </footer>
+
+  <!-- === SCRIPT FOR ANIMATIONS === -->
+  <script>
+    // Email click response
+    document.querySelectorAll('.btn').forEach(button => {
+      button.addEventListener('click', function () {
+        if (button.href && button.href.startsWith('mailto:')) {
+          alert('Thank you for reaching out!');
+        }
+      });
+    });
+
+    // Cursor trail dots
+    document.addEventListener('mousemove', e => {
+      const dot = document.createElement('div');
+      dot.className = 'cursor-dot';
+      dot.style.left = e.pageX + 'px';
+      dot.style.top = e.pageY + 'px';
+      document.body.appendChild(dot);
+      setTimeout(() => dot.remove(), 500);
+    });
+
+    // Click ripple effect
+    document.addEventListener('click', e => {
+      const ripple = document.createElement('div');
+      ripple.className = 'click-effect';
+      ripple.style.left = (e.pageX - 10) + 'px';
+      ripple.style.top = (e.pageY - 10) + 'px';
+      document.body.appendChild(ripple);
+      setTimeout(() => ripple.remove(), 600);
+    });
+  </script>
+
+</body>
+</html>
